@@ -10,3 +10,6 @@ _scratch/
 /spec/gen_spec/spec*.db
 tags
 /tests/debug.py
+/build/*
+.python-version
+
