@@ -131,6 +131,28 @@ class BaseShape(object):
     @name.setter
     def name(self, value):
         self._element._nvXxPr.cNvPr.name = value
+    
+    @property
+    def title(self):
+        """
+        Title of this shape. This is often blank unless set by user.
+        """
+        return self._element.shape_title
+
+    @title.setter
+    def title(self, value):
+        self._element._nvXxPr.cNvPr.title = value
+
+    @property
+    def descr(self):
+        """
+        Description of this shape. This is often blank unless set by user.
+        """
+        return self._element.shape_descr
+
+    @name.setter
+    def descr(self, value):
+        self._element._nvXxPr.cNvPr.descr = value
 
     @property
     def part(self):

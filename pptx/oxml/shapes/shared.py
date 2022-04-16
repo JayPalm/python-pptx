@@ -168,6 +168,20 @@ class BaseShapeElement(BaseOxmlElement):
         return self._nvXxPr.cNvPr.name
 
     @property
+    def shape_title(self):
+        """
+        Title of this shape
+        """
+        return self._nvXxPr.cNvPr.title
+
+    @property
+    def shape_descr(self):
+        """
+        Description of this shape
+        """
+        return self._nvXxPr.cNvPr.descr
+
+    @property
     def txBody(self):
         """
         Child ``<p:txBody>`` element, None if not present
@@ -304,6 +318,8 @@ class CT_NonVisualDrawingProps(BaseOxmlElement):
     hlinkHover = ZeroOrOne("a:hlinkHover", successors=_tag_seq[2:])
     id = RequiredAttribute("id", ST_DrawingElementId)
     name = RequiredAttribute("name", XsdString)
+    title = RequiredAttribute("title", XsdString)
+    descr = RequiredAttribute("descr", XsdString)
     del _tag_seq
 
 
