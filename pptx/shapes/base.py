@@ -150,7 +150,7 @@ class BaseShape(object):
         """
         return self._element.shape_descr
 
-    @name.setter
+    @descr.setter
     def descr(self, value):
         self._element._nvXxPr.cNvPr.descr = value
 
